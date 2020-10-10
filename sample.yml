@@ -1,0 +1,31 @@
+project:
+  #name must be ^[a-z]{1}[a-z\-]*[a-z]{1}$
+  name: habit
+  groupId: com.thirtyai
+  #artifactId must be ^[a-z]{1}[a-z\-]*[a-z]{1}$
+  artifactId: habit-app-test
+  version: 1.0.1
+  rootFolder: ../habit-test
+  url: http://www.baidu.com
+  basePackage: com.thirtyai.ihabit
+  booleans:
+    baseResultMap: true
+    activeRecord: true
+    open: false
+    enableCache: false
+    baseColumnList: false
+  modules:
+    #^[a-z]{1}[a-z\-]*[a-z]{1}$
+    - name: shop
+      statusFolder: status
+      basePackage: shop
+      booleans:
+        root: true
+        moreJar: false
+        withRpcForMS: false
+        withI18nProject: true
+      dbConfig:
+        url: jdbc:mysql://127.0.0.1:3306/gent_ihabit?useUnicode=true&useSSL=false&characterEncoding=utf8
+        driverName: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 123456
